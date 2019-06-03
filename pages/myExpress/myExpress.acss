@@ -1,0 +1,154 @@
+.box {
+   background: #F2F2F2;
+}
+.box .tabs{
+    background: #ffffff;
+    width:750rpx;
+    height:104rpx;
+    line-height: 104rpx;
+    color: #121212;
+    font-size: 32rpx;
+    display: flex;
+
+}
+.box .tabs .tab{
+    width:250rpx;
+    text-align: center;
+}
+.box .tabsline{
+    position: relative;
+    left:0px;
+    width: 250rpx;
+    height: 2rpx;
+    background: #F45322;
+    margin:0 0 16rpx 0;
+    transition:0.4s all ease;
+}
+.box .tabscontents .tabcontent{
+    display: none;
+}
+.box .tabscontents .tabcontent.show{
+    display: block;
+}
+.box .tabscontents .tabcontent.hidden{
+    display: none;
+}
+.expressbox{
+    background: #ffffff;
+    margin:0 0 20rpx 0;
+}
+.expressbox .expressNo{
+    padding: 14rpx 0 0 42rpx;
+    font-size: 28rpx;
+    color: #9B9B9B;
+    display: flex;
+    line-height: 66rpx;
+    justify-content: space-between;
+    border-bottom: 3rpx solid #EEEEEE;
+}
+.expressbox .expressNo text{
+    margin:0 16rpx 0 0;
+}
+.expressbox .expressNo .expressState{
+   color: #E33253;
+   margin: 0 56rpx 0 0
+}
+.expressbox .cityboxfrom{
+    width: 200rpx;
+    margin:0 20rpx 0 0;
+}
+.expressbox .cityboxto{
+    width: 200rpx;
+    margin:0 0 0 20rpx;
+}
+.expressbox .fromto .from{
+    float:right;
+}
+.expressbox .fromto .to{
+    float:left;
+}
+.expressbox .fromto{
+    padding:36rpx 0 0 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px dashed #E9E9E9;
+}
+.expressbox .fromto .city{
+    font-size: 46rpx;
+    color: #000000;
+}
+.expressbox .fromto .name{
+    margin:12rpx 0 24rpx;
+    font-size: 28rpx;
+    color: #575757;
+    overflow: hidden;
+    line-height: 40rpx;
+    /* height: 0.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 0.7rem; */
+}
+
+.expressbox .status{
+    width: 282rpx;
+    height:42rpx;
+    margin:0 10rpx;
+    background:url(../image/cardot.png) center no-repeat;
+    background-size: contain;
+    line-height: 40rpx;
+}
+.expressbox .status text{
+    width:92rpx;
+    height:6rpx;
+    border:3rpx solid rgba(188,188,188,1);
+}
+.expressTime{
+    color:#9B9B9B;
+    font-size:24rpx;
+    padding:14rpx 0;
+    text-align:center;
+}
+
+.loading{
+    position: fixed;
+    left:50%;
+    top:40%;
+    transform: translate(-50%);
+}
+.loading image{
+    width: 100rpx;
+    height:100rpx;
+    background-size: contain;
+}
+
+.noaddress{
+    position: fixed;
+    left:50%;
+    top:25%;
+    transform: translate(-50%);
+}
+.noaddress image{
+    width: 212rpx;
+    height:302rpx;
+    margin:0 0 0 30rpx;
+    background-size: contain;
+}
+.noaddress .addresstxt{
+    margin:34rpx 0 0 0;
+    font-size: 24rpx;
+    color: #797979;
+}
+.noaddress .addaddress{
+    margin:54rpx auto 0;
+    font-size: 28rpx;
+    color: #E83F57;
+    width: 166rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    border:1px solid #E83F57;
+    border-radius: 20px;
+    text-align: center;
+
+}

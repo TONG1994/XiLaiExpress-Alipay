@@ -1,0 +1,16 @@
+<view>
+    <view class="box"> 
+        <view class="logintitle">喜来快递</view>
+        <view class="logintitle">欢迎你</view>
+        <view class="codebox">
+            <view class="countdown">
+                <view class="phonenum">{{phonenum}}</view>
+                <view class="count" onTap="{{countclick?'counts':''}}">{{countdown}}</view>
+            </view>
+            <input  type="number"  class="input codeinput" onInput="oncodeInput" placeholder="请输入短信验证码" maxlength="4" />
+            <button class="{{active}}" type="default"  onTap="{{abled?'login':''}}">{{status}}</button>
+            <view class="info">注册即表示你已阅读并同意<text  onTap="rule">《用户协议及隐私政策》</text></view>
+        </view>
+    </view>
+    <view class="loading" hidden="{{loadingflag ? false : true}}"><image src="../../image/loading.gif" mode="" /></view>
+</view>

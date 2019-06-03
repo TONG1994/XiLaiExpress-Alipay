@@ -1,0 +1,114 @@
+.box {
+    width:750rpx;
+    background: #F7F7F7;
+}
+.box .infor{
+    color: #4A4A4A;
+    font-size: 24rpx;
+    line-height: 64rpx;
+    height: 64rpx;
+    padding:0 0 0 50rpx;
+}
+.box .inputs{
+    padding:0 0 0 48rpx;
+    width:702rpx;
+    font-size: 32rpx;
+    color: #A6A6A6;
+    background: #ffffff;
+}
+.box .inputs .inputbox{
+    display: flex;
+    border-bottom: 1px solid #E9E9E9;
+    justify-content: space-around;
+}
+.box .inputs .inputbox .inputtitle{
+    width: 195rpx;
+    margin:0 30rpx  0 0;
+    line-height: 104rpx;
+    height: 104rpx;
+    color:#000;
+}
+.box .inputs .inputbox .inputtitle.name{
+    letter-spacing: 63rpx;
+}
+.box .inputs .inputbox .input{
+    line-height: 104rpx;
+    width: 466rpx;
+    height: 104rpx;
+    font-size: 32rpx;
+    background: #ffffff;
+}
+.box .hint{
+    text-align: right;
+    font-size: 22rpx;
+    color: #e83f57;
+    display: none;
+}
+.box .hint.hintshow{
+    display: block;
+}
+
+.box .checkbox{
+    position: absolute;
+    bottom:0rpx;
+}
+.box .checkbox .checktext{
+    color: #4A4A4A;
+    font-size: 24rpx;
+    text-align: center;
+    display: none;
+}
+.box .checkbox.active .checktext{
+    display: block;
+}
+.box .checkbox .checkIdcard{
+    
+    margin:32rpx 75rpx 140rpx;
+    width: 600rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    background: #9B9B9B;
+    font-size: 32rpx;
+    color: #ffffff;
+    border-radius: 20px;
+}
+.box .checkbox.active .checkIdcard{
+    background: #E83F57;
+}
+.box .alertmess{
+    display: none;
+    position: absolute;
+    top:238rpx;
+    left:50%;
+    transform: translateX(-50%);
+    width:322rpx;
+    min-height:208rpx; 
+    background:rgba(116,116,116,1);
+    opacity:0.7364;
+    border-radius: 25rpx ; 
+}
+.box .alertmess.active{
+    display: block;
+}
+.box .alertimage{
+    margin:38rpx 120rpx 0;
+    width: 84rpx;
+    height: 84rpx;
+    background-size: contain;
+}
+.box .text{
+    text-align: center;
+    color: #FFFFFF;
+    margin:18rpx 20rpx 24rpx 20rpx;
+}
+.loading{
+    position: fixed;
+    left:50%;
+    top:40%;
+    transform: translate(-50%);
+}
+.loading image{
+    width: 100rpx;
+    height:100rpx;
+    background-size: contain;
+}

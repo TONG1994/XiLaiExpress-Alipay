@@ -1,0 +1,12 @@
+<view class="box"> 
+    <view class="inforText">根据国家最新规定，寄收快递须实名登记，请选择以下任意一种实名认证</view>
+    <view class="infor identityImgClick" onTap="photograph">
+        <image src="../../image/photo.png" mode="scaleToFill"/>
+        <text>身份证正面拍照</text>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </view>
+    <view class="infor identityInputClick" onTap="write">
+        <image src="../../image/write.png" mode="scaleToFill"/>
+        <text>填写实名信息</text>
+    </view>
+</view>

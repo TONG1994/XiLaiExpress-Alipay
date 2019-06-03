@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/location/location",
+    "pages/courierOrderDetail/courierOrderDetail",
+    "pages/editAddress/editAddress",
+    "pages/addAddress/addAddress",
+    "pages/about/about",
+    "pages/myAddress/myAddress",
+    "pages/my/my",
+    "pages/certificate/certificate",
+    "pages/myExpress/myExpress",
+    "pages/orderDetail/orderDetail",
+    "pages/coupon/coupon",
+    "pages/set/set",
+    "pages/sendExpress/sendExpress",
+    "pages/vertificate/vertificate",
+    "pages/rule/rule",
+    "pages/authentication/authentication"
+  ],
+  "window": {
+    "enableWK": "YES",
+    "enableDSL": true,
+    "defaultTitle": "快递通",
+    "backgroundColor": "#F5F5F9",
+    "pullRefresh": false,
+    "allowsBounceVertical": false
+  },
+  "tabBar": {
+    "textColor": "#121212",
+    "selectedColor": "#F90D0D",
+    "backgroundColor": "#FFFFFF",
+    "items": [
+      {
+        "pagePath": "pages/home/home",
+        "icon": "image/home.png",
+        "activeIcon": "image/home2.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "icon": "image/my.png",
+        "activeIcon": "image/my2.png",
+        "name": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

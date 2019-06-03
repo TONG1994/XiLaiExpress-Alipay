@@ -1,0 +1,152 @@
+.expressDetailbox{
+    width: 750rpx;
+}
+.expressDetailbox .expressNo{
+    padding: 0 0 0 80rpx;
+    font-size: 30rpx;
+    line-height: 132rpx;
+    color: #ffffff;
+    height: 132rpx;
+    background-size: contain;
+    background:url(../../image/detailbg.png);
+    margin:0 0 20rpx 0;
+}
+
+
+.senderbox{
+    display: flex;
+    background: #ffffff;
+    padding: 28rpx 58rpx 28rpx 46rpx;
+    align-items: center;
+    position: relative;
+    margin:0 0 20rpx 0;
+
+}
+.senderbox .senderImage{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 100%;
+    margin:0 36rpx 0 0;
+}
+.senderbox .senderphone{
+    width: 58rpx;
+    height: 58rpx;
+    position: absolute;
+    right: 70rpx;
+}
+.senderbox .senderMessage .mess{
+    display: flex;
+    line-height: 44rpx;
+}
+.senderbox .senderMessage .mess .name{ 
+    font-size: 32rpx;
+    margin:0 15rpx 0 0;
+}
+.senderbox .senderMessage .mess .servicestation{
+    font-size: 24rpx
+}
+.senderbox .senderMessage .senderAddress{
+    font-size: 24rpx;
+    color: #A6A6A6;
+    line-height: 42rpx;
+}
+
+.sendmess{
+    background: #ffffff;
+    padding:20rpx 40rpx 16rpx 40rpx;
+    margin: 0 0 20rpx 0;
+}
+.sendmess .messbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 26rpx 0 26rpx 0;
+}
+.sendmess .messbox .sendtitle{
+    color: #f90d0d;
+    font-size: 32rpx;
+    background-size: cover;
+    width: 50rpx;
+    height: 56rpx;
+    margin: 0 32rpx 0 0;
+}
+
+
+.sendmess .messline{
+    width:100%;
+    height:3rpx;
+    background: #F1F1F1;
+}
+.sendmess .messaddress{
+    width: 600rpx;
+}
+.messbox  .mess{
+    display: flex;
+    justify-content: space-between;
+    color: #121212;
+    font-size: 32rpx;
+    line-height: 40rpx;
+}
+.messbox  .mess .name{
+    font-size: 32rpx;
+    line-height: 44rpx;
+}
+.messbox .address{
+    color: #898989;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+.fuwutext{
+    letter-spacing: 2.4rpx;
+    margin-top: 20rpx;
+}
+
+.ordermess{
+    padding:22rpx 0 22rpx  40rpx;
+    background: #ffffff;
+}
+.ordermess .text{
+    letter-spacing: 2.4rpx;
+}
+.ordermess view{
+   line-height: 36rpx;
+   color: #989898;
+   font-size: 24rpx;
+}
+.ordermess .cancelbox{
+    border-top: 3rpx solid #F1F1F1;
+    margin: 20rpx 40rpx 0 0;
+    display: none;
+}
+.ordermess .cancelbox.show{
+    display: block;
+}
+.ordermess .cancel {
+    background: #ffffff;
+    margin: 16rpx 0 0rpx 510rpx;
+    font-size: 4;
+    color: #4A4A4A;
+    border-radius: 100rpx;
+    width: 150rpx;
+    height: 50rpx;
+    border: 3rpx solid #323232;
+    text-align: center;
+    line-height: 52rpx;
+    display: none;
+}
+.ordermess .cancel.show{
+    display: block;
+}
+
+
+.loading{
+    position: fixed;
+    left:50%;
+    top:40%;
+    transform: translate(-50%);
+}
+.loading image{
+    width: 100rpx;
+    height:100rpx;
+    background-size: contain;
+}

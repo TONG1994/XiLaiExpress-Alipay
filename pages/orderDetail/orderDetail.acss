@@ -1,0 +1,233 @@
+.box {
+   background: #F2F2F2;
+   width: 750rpx;
+}
+.box .expressNo{
+    padding: 0 0 0 80rpx;
+    font-size: 30rpx;
+    line-height: 132rpx;
+    color: #ffffff;
+    height: 132rpx;
+    background-size: contain;
+    background:url(../../image/detailbg.png)
+}
+.expressMess{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:32rpx 0 12px 30rpx;
+    margin:0 0 20rpx 0;
+    background: #ffffff;
+}
+.expressText{
+  display: flex;
+}
+.expressText .companyImg{
+    width: 74rpx;
+    height: 74rpx;
+    margin:0 22rpx 0 0;
+    background-size: contain;
+}
+.logisticsNo{
+    display: flex;
+    line-height: 80rpx;
+}
+.logisticsNo .copyImg{
+  display: flex;
+    width: 40rpx;
+    height: 40rpx;
+    margin:20rpx 20rpx;
+    background-size: contain;
+
+}
+
+.box .tabs{
+    background: #ffffff;
+    width:750rpx;
+    height:104rpx;
+    line-height: 104rpx;
+    color: #121212;
+    font-size: 32rpx;
+    display: flex;
+
+}
+.box .tabs .tab{
+    width:375rpx;
+    text-align: center;
+}
+.box .tabsline{
+    position: relative;
+    left:0rpx;
+    width: 375rpx;
+    height: 2rpx;
+    background: #F45322;
+    margin:0 0 16rpx 0;
+    transition:0.4s all ease;
+}
+.box .tabscontents{
+   margin:0 0 40rpx 0;
+}
+.box .tabscontents .tabcontent{
+    display: none;
+}
+.box .tabscontents .tabcontent.show{
+    display: block;
+}
+.box .logisbg{
+    background: white;
+}
+.box .tabscontents .tabcontent.hidden{
+    display: none;
+}
+
+/* 运单详情 */
+.sheetDetail{
+    background: #ffffff;
+}
+.sheetDetail .li{
+    padding: 16rpx 0 16rpx 50rpx;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+.sheetDetail .li:last-child{
+    border:none;
+}
+.sheetCity{
+    display: flex;
+    justify-content: center;
+    padding: 6rpx 0;
+    font-size: 48rpx;
+}
+.cityArrow{
+    width:44rpx;
+    height: 12rpx;
+    margin:22rpx 26rpx;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image:url("../../../image/arrow.png");
+}
+.sheetDetail .li .customer{
+    font-size: 24rpx;
+}
+.sheetDetail .li .customer span{
+    margin:0 8rpx 0 0;
+}
+.sheetDetail .li.tables{
+    display: flex;
+    position: relative;
+}
+.sheetDetail .li.tables .tableright{
+    position: absolute;
+    left: 56%;
+}
+.sheetDetail .li.tables .line{
+    width: 3rpx;
+    height: 100%;
+    background: #E5E5E5;
+    position: absolute;
+    z-index: 100;
+    top: 0rpx;
+    left: 50%;
+    margin-left: -1rpx;
+}
+.sheetDetail .li.tables .table{
+    width:372rpx;
+}
+.sheetDetail .li.cost span:nth-child(even){
+    margin:0 20rpx 0 0;
+}
+.sheetDetail .li .staffName{
+    margin:0 8rpx 0 0;
+}
+.costtext{
+    margin:0 30rpx 0 0;
+}
+
+/* 物流详情 */
+.logisticsDetail{
+    padding:40rpx 0 32rpx 0rpx;
+    background: #ffffff;
+    display: none;
+    margin:0 0 0 70rpx;
+}
+.logisticsDetail.show{
+    display: block;
+    position: relative;
+}
+/* .logisticsDetail .li{
+    margin:0 0 46rpx 0;
+} */
+.logisticsDetail .li .logsiticsPath .mess{
+    color: #7A7A7A;
+    font-size: 24rpx;
+    margin:0 0 10rpx 0;
+    line-height: 40rpx;
+}
+.logisticsDetail .li .logsiticsPath .time{
+    color: #AFAFAF;
+    font-size: 22rpx;
+}
+.logisticsDetail .li{
+    position: relative;
+    display:flex;
+    padding:0 0 0 38rpx;
+    width: 580rpx;
+}
+.logisticsDetail .line{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    background-color: #e5e5e5;
+    width: 3rpx;
+    left: 0;
+    top: 60rpx;
+    bottom: -56rpx;
+    height: 100%;
+}
+.logisticsDetail  .line.noline{
+    display: none;
+}
+.grayIcon{
+    position: absolute;
+    z-index: 100;
+    left: -8rpx;
+    top:10rpx;
+    width:18rpx;
+    height: 18rpx;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image:url("../../../image/grayIcon.png");
+    display: inline-block;
+}
+.grayIcon.firstIcon{
+    background-image:url("../../../image/redIcon.png");
+}
+
+.cancel {
+    background: #ffffff;
+    margin: 16rpx 0 70rpx 526rpx;
+    font-size: 28rpx;
+    color: #4A4A4A;
+    border-radius: 100rpx;
+    width: 180rpx;
+    height: 60rpx;
+    border: 3rpx solid #E6E6E6;
+    text-align: center;
+    line-height: 58rpx;
+    display: none;
+}
+.cancel.show{
+    display: block;
+}
+.logistics-No{
+    font-size: 40rpx;
+    text-align: center;
+    display: none;
+    line-height: 150rpx;
+    background: #ffffff;
+}
+.logistics-No.show{
+   display: block;
+}

@@ -1,0 +1,59 @@
+<view>
+    <view class="expressDetailbox">
+        <view class="expressNo">
+            <view class="status">订单{{detaildata.orderstate}}</view>
+        </view>
+        <view class="senderbox" hidden={{detaildata.courierUuid?false:true}}>
+            <image class="senderImage" src="{{courierdata.photo}}" onError="imgerror" background-size="contain"></image>
+            <view class="senderMessage">
+                <view class="mess">
+                    <view class="name">{{courierdata.userName}}</view>
+                    <view class="servicestation" id="sentAddressPhone">{{courierdata.orgName}}</view>
+                </view>
+                <view class="senderAddress">{{courierdata.detailAddress}}</view>
+            </view>
+            <image onTap="callsender" class="senderphone" src="../../image/phone.png" background-size="contain"></image>
+        </view>
+        <view class="sendmess">
+            <view class="messbox">
+                <image class="sendtitle" src="../../image/from.png" mode="" />
+                <view class="messaddress">
+                    <view class="mess">
+                        <view class="name">{{detaildata.senderName}}</view>
+                        <view class="phone">{{detaildata.senderPhone}}</view>
+                    </view>
+                    <view class="address">{{detaildata.from}}</view>
+                </view>
+            </view>
+            <view class="messline"></view>
+            <view class="messbox">
+                <image class="sendtitle" src="../../image/to.png" mode="" />
+                <view class="messaddress">
+                    <view class="mess">
+                        <view class="name">{{detaildata.receiverName}}</view>
+                        <view class="phone">{{detaildata.receiverPhone}}</view>
+                    </view>
+                    <view class="address">{{detaildata.to}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="ordermess">
+            <view>
+                <text class="text">订 单 号：</text>{{detaildata.orderNo}}
+            </view>
+            <view>物品类型：{{detaildata.goodsType}}</view>
+            <view>物品重量：{{detaildata.goodsWeight}}</view>
+            <view>预约时间：{{detaildata.bookedFromto}}</view>
+            <view class="fuwutext">服 务 站：</text>{{detaildata.orgName === (null||'')?'无':detaildata.orgName}}
+            </view>
+            <view>详细地址：{{detaildata.detailAddress === null?'无':detaildata.detailAddress}}</view>
+            <view>联系方式：{{detaildata.headTelephone=== null?'无':detaildata.headTelephone}}</view>
+            <view class="cancelbox {{cancelflag?'show':''}}">
+                <view class="cancel {{cancelflag?'show':''}}" onTap="cancelExpress">取消订单</view>
+            </view>
+        </view>
+    </view>
+    <view class="loading" hidden="{{loadingflag ? false : true}}">
+        <image src="../../image/loading.gif" mode="" />
+    </view>
+</view>

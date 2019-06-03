@@ -1,0 +1,137 @@
+
+
+.index-wrap {
+    display: flex;
+    flex: 1;
+    background-color: #F7F7F7;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    width: 750rpx;
+    background: url('/image/bg.png') left -150rpx no-repeat;
+    background-size: contain;
+}
+.sent-wrap{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    width: 750rpx;
+    /* height:822rpx; */
+
+    /* background-size: 100% 100%; */
+}
+.sent-btn {
+    width: 412rpx;
+    height: 412rpx;
+    margin: 0 auto;
+    background-image: url('image/bgbefore.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* 
+@keyframes water{
+    0% {  
+         background-image: url('image/bgbefore.png');
+    }
+    100% {  
+        background-image: url('image/bgafter.png'); 
+        opacity: 1;  
+    }
+} */
+
+.sent-btn.active{
+   background-image: url('image/bgafter.png'); 
+}
+
+
+.sent-btn .icon-wrap {
+    position: relative;
+    width: 208rpx;
+    margin: 0 auto 24rpx auto;
+    padding: 82rpx 0 16rpx 0;
+}
+
+.sent-btn .sent-icon {
+    width: 112rpx;
+    height: 108rpx;
+    margin: 100rpx auto 10rpx;
+    background-image: url("image/flybefore.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.sent-btn.active .sent-icon {
+   background-image: url("image/flyafter.png");
+}
+.sent-btn.active .send {
+    color: #FF591A;
+}
+.sent-btn .send {
+    font-size: 40rpx;
+    color: #FF4747;
+    letter-spacing: 10rpx;
+    text-align: center;
+    margin:30rpx 0 0 0;
+}
+
+.record-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.record-wrap .record{
+    display: inline-block;
+    width: 356rpx;
+    height: 76rpx;
+    margin:236rpx 0 0 0;
+}
+
+.realName-wrap {
+    position: absolute;
+    bottom: 30rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.realName-wrap .realname {
+    font-size: 28rpx;
+    color: #A8A8A8;
+    padding: 20rpx 0;
+}
+
+.foot-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* 
+.sent-wrap .circlebox{
+    position: relative;
+    left: 50%;
+    width: 420rpx;
+    height: 420rpx;
+    left:165rpx;
+}
+.sent-wrap .circlebox .circle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #ffffff;
+    border-radius: 100%;
+    transform: translate(-50%,-50%);
+}
+.sent-wrap .circlebox .circle.circle3{
+    width: 420rpx;
+    height: 420rpx;
+    opacity: 0.3;
+}
+.sent-wrap .circlebox .circle.circle2{
+    width: 380rpx;
+    height: 380rpx;
+    opacity: 0.7;
+}
+.sent-wrap .circlebox .circle.circle1{
+    width: 340rpx;
+    height: 340rpx;
+    opacity: 1;
+} */

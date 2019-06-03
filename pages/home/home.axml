@@ -1,0 +1,21 @@
+<view class="index-wrap">
+    <view class="sent-wrap" onTap="sendExpress">
+      <view class="sent-btn" hover-class="active">
+          <view class="sent-icon"></view>
+          <view class="send">发快递</view>
+      </view>
+      <!-- <view class="circlebox">
+        <view class="circle circle3"></view>
+        <view class="circle circle2"></view>
+        <view class="circle circle1"></view>
+      </view>   -->
+    </view>
+    <view class="record-wrap">
+      <image  onTap="expressRecord" class="record" src="../../image/record.png" background-size="cover"></image>
+    </view>
+    <view class="realName-wrap" onTap="certificate" hidden="{{CardValid=='true'?true:false}}">
+        <view class="realname">
+            你还未实名认证，立即认证 >>>
+        </view>
+    </view>
+</view>

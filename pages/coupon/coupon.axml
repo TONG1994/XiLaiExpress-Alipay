@@ -1,0 +1,42 @@
+<view>
+    <view class="coupon-wrap">
+        <view class="coupon">
+            <view class="li" a:for={{list}}>
+                <view class="coupon-li-wrap  {{item.couponstatus}}">
+                    <view class="li-wrap-top">
+                        <view class="coupon-li-wrap-top">
+                            <view class="wrap-top-price">
+                                <view class="price top-price-tit"><view  class="p">快递代金券</view></view>
+                                <view class="price top-price-num">
+                                    <text class="symbol">¥</text>
+                                    <text class="num">{{item.couponAmount}}</text>
+                                </view>
+                            </view>
+                            <view class="wrap-top-date">
+                                <view class="date top-date-num">有效期至{{item.FailureTime}}</view>
+                                <view class="date top-data-txt">满¥{{item.minimumConsumption}}可用</view>
+                            </view>
+                        </view>
+                        <view class="bottom-left-corner"></view>
+                        <view class="bottom-right-corner"></view>
+                    </view>
+                    <view class="li-wrap-bottom">
+                        <view class="coupon-li-wrap-bottom">
+                            <view  class="p">仅限手机号{{userName}}使用</view>
+                        </view>
+                        <view class="top-left-corner"></view>
+                        <view class="top-right-corner"></view>
+                        <view class="used-icon" style="display: none">
+                            <image class="icon" src="../../image/{{item.couponstatus}}.png" mode="" />
+                        </view>
+                    </view>
+                </view>
+            </view>    
+        </view>
+    </view>
+    <view class="loading" hidden="{{loadingflag ? false : true}}"><image src="../../image/loading.gif" mode="" /></view>
+    <view class="nocoupon" hidden="{{nocoupon ? false : true}}">
+        <image src="../../image/nocoupon.png" mode="" />
+        <view class="coupontxt">您当前没有卡劵哦～</view>
+    </view>
+</view>

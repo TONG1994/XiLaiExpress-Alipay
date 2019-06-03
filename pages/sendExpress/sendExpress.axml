@@ -1,0 +1,174 @@
+<view class="box">
+    <view class="senderbox" hidden={{flag?false:true}}>
+        <image class="senderImage" src="{{courierdata.photo}}" onError="imgerror" background-size="contain" ></image>
+        <view class="senderMessage">
+            <view class="mess">
+                <view class="name">{{courierdata.userName}}</view>
+                <view class="servicestation" id="sentAddressPhone">{{courierdata.orgName}}</view>
+            </view>
+            <view class="senderAddress">{{courierdata.detailAddress}}</view>
+        </view>
+        <image onTap="callsender" class="senderphone" src="../../image/phone.png" background-size="contain" ></image>
+    </view>
+    <view class="expressBox">
+        <view class="expressMesslist">
+            <view class="li" id="sentAddressBtn" onTap="jiaddress">
+                <view class="liContainer">
+                    <image class="sendtitle" src="../../image/from.png" mode="" /> 
+                    <view class="messages">
+                        <view class="mess">
+                            <view class="name" id="sentAddressName">{{fromAddress.name}}</view>
+                            <!-- <view class="telephone" id="sentAddressPhone">{{fromAddress.phone}}</view> -->
+                        </view>
+                        <view class="AddressDetail">{{fromAddress.fromaddressDetail}}</view>
+                    </view>
+                    <view class="hint" hidden="{{fromhint?false:true}}">寄件人信息</view>
+                    <image class="righticon" src="../../image/go.png" background-size="contain" ></image>
+                </view>
+                <view class="tip" hidden="{{tipfromhint?false:true}}">抱歉，该寄件地址不在服务范围内</view>
+            </view>
+            <view class="li" id="receiveAddressBtn" onTap="shouaddress">
+                <view class="liContainer">
+                    <image class="sendtitle" src="../../image/to.png" mode="" />
+                    <view class="messages">
+                        <view class="mess">
+                            <view class="name" id="receiveAddressName">{{desAddress.name}}</view>
+                            <!-- <view class="telephone" id="receiveAddressPhone">{{desAddress.phone}}</view> -->
+                        </view>
+                        <view class="AddressDetail">{{desAddress.desaddressDetail}}</view>
+                    </view>
+                    <view class="hint" hidden="{{deshint?false:true}}">收件人信息</view>
+                    <image class="righticon" src="../../image/go.png" background-size="contain" ></image>
+                </view>
+                <view class="tip" hidden="{{tiptohint?false:true}}">抱歉，该收件地址不在服务范围内</view>
+            </view>
+        </view>
+    </view>
+    <view class="expressDetail">
+        <!-- <view class="section" >
+            <view class="section-title">物品类型</view>
+            <view class="section-content">
+                <picker value="{{typeindex}}"  onChange="bindtypePickerChange"  range="{{typearray}}">
+                    <view class="picker">
+                     {{typearray[typeindex]}}
+                     </view>
+                 
+                </picker>
+                <image class="righticon" src="../../image/go.png" background-size="contain" ></image>
+            </view>
+        </view> -->
+
+        <view class="section">
+          <view class="section-title">物品类型</view>
+          <view class="section-content">
+            <view class="container">
+              <view class="picker">
+                <view onTap="openGoods">{{goodsvalue}}</view>
+              </view>
+            </view>
+            <view a:if="{{conditionGoods}}" class="citypicker">
+              <view class="cityheader">
+                <view onTap="openGoods" class="city-cancel">取消</view>
+                <view onTap="confirmGoods" class="city-true">确定</view>
+              </view>
+              <view class="goodsbody">
+                <view class="goodstabs">
+                  <view class="tabGoods {{bookedGoods==index?'active':''}}" onTap="chooseGoods" a:for="{{typearray}}" data-id="{{index}}">
+                    <view class="goods">{{item}}</view>
+                  </view>
+                  <input type="text" id="goods" maxlength='5' value="{{goodsinputvalue}}" onInput="onidInput" class="input {{inputshow? '':'inputshow'}}" placeholder="请输入物品类型" maxlength="18"/>
+                </view>
+              </view>
+            </view>
+            <image class="righticon" src="../../image/go.png" background-size="contain"></image>
+          </view>
+        </view>
+
+        <view class="section" >
+            <view class="section-title">物品重量（公斤）</view>
+            <view class="section-content">
+                <picker value="{{weightindex}}"  onChange="bindweightPickerChange"  range="{{weightarray}}">
+                    <view class="picker" value="eeee">
+                        {{weightarray[weightindex]}}
+                     </view>
+            
+                </picker>
+                <image class="righticon" src="../../image/go.png" background-size="contain" ></image>
+            </view>
+        </view>
+        <view class="section" >
+            <view class="section-title">预约时间</view>
+            <view class="section-content">
+                        <view class="container">
+                            <view class="picker">
+                                <view  onTap="open">{{fulldatefromto}}</view>     
+                            </view>
+                        </view>
+                        <view a:if="{{condition}}" class="citypicker">
+                            <view class="cityheader">
+                                <view onTap="open" class="city-cancel">取消</view>
+                                <view onTap="confirm" class="city-true">确定</view>
+                            </view>
+                            <view class="timebody">
+                                <view class="datetabs">
+                                    <view class="tab {{bookedFromDateid==index?'active':''}}" onTap="chooseDate" a:for="{{Datelist}}" data-id="{{index}}">
+                                       <view class="day">{{item.day}}</view> 
+                                       <view class="date">{{item.bookedFromDate}}</view>
+                                    </view>
+                                    
+                                </view>
+                                 <view class="timetabs">
+                                    <button type=" {{bookedFromTimeid==index?'primary':'default'}}"  disabled="{{index>nowtimeindex?false:true}}" class="tab" onTap="chooseTime" a:for="{{Timelist}}" data-id="{{index}}">{{item}}</button>
+                                </view>
+                            </view>
+                     
+                        </view>
+                
+                <image class="righticon" src="../../image/go.png" background-size="contain" ></image>
+            </view>
+        </view>
+    </view>
+    <view class="expressDetail orgName {{showorgName ? 'orgName--show':''}}">
+        <view class="section" onTap="{{selectOrgStatus?'':'onTopBtnTap'}}">
+            <view class="section-title">服务站</view>
+            <view class="section-content">
+                <view class="picker" value="eeee">{{selectOrgName}}</view>
+                <view class="arrowbox"><image class="righticon {{orgArowShow ? 'orgArow--Show':''}}" src="../../image/go.png" background-size="contain"></image></view>
+            </view>
+        </view>
+    </view>
+    <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+        <view class="zan-dialog__mask" onTap="onTopBtnTap" />
+        <view class="zan-dialog__container">
+            <view class="container" style="height:540rpx;width:100%;overflow:scroll;">
+                <view class="list" onTap="chooseOrg" a:for="{{selectOrg}}" data-id="{{index}}">
+                    <view class="list-left">
+                        <image class="list-icon" src="../../image/home3.png" background-size="contain"></image>
+                        <view class="list-text">
+                            <view class="orgtext">{{item.orgName}}</view>
+                            <view class="orgtextAddress">{{item.detailAddress}}</view>
+                            <view a:if="{{item.area>999}}" class="orgtextAddress">{{(item.area*0.001).toFixed(2)}}km</view>
+                            <view a:if="{{item.area<1000}}" class="orgtextAddress">{{item.area}}m</view>
+                        </view>
+                    </view>
+                    <view class="orgPhone">{{item.headTelephone}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footdiv {{showorgName?'':'footmargin'}}">
+        <checkbox-group onChange="onChange" class="checkbox">
+            <label>
+                <checkbox value="{{checkStatus}}" class="check" disabled="{{disabled}}"/>
+                <text class="checkbox-text">我愿意遵守</text>
+            </label>
+            <text class="blue" onTap="{{ruleclick?'rule':''}}">《用户协议及隐私政策》</text>
+        </checkbox-group>
+        <view class="buttonbox">
+            <button class="button {{checkStatus=='true'?'red':''}}" onTap="{{checkStatus=='true'?'sendExpress':''}}" >立即下单</button>
+        </view>
+    </view>
+    <view class="shadow" hidden="{{!condition}}"></view>
+    <view class="shadow" hidden="{{!conditionGoods}}"></view>
+    <view class="loading" hidden="{{loadingflag ? false : true}}"><image src="../../image/loading.gif" mode="" /></view>
+</view>

@@ -1,0 +1,74 @@
+
+.box {
+    width: 595rpx;
+    height: 100%;
+    padding:64rpx 78rpx 0;
+    background: #ffffff;
+}
+.logintitle{
+    font-size: 74rpx;
+}
+.inputbox{
+    margin:66rpx 0 0 0;
+}
+.inputbox.hideinputbox{
+    display: none;
+}
+.inputbox .input,.codebox .input{
+    line-height: 64rpx;
+    width: 594rpx;
+    height: 64rpx;
+    font-size: 32rpx;
+    background: #ffffff;
+    /* color: #A6A6A6; */
+    border-bottom: 1px solid #E83F57;
+}
+.box button{
+    margin:76rpx 0 0 0;
+    border-radius: 30px;
+    background: #B7B7B7;
+    color: #ffffff;
+    font-size: 32rpx;
+    line-height: 88rpx;
+    height: 88rpx;
+}
+.box button.active{
+    background: #E83F57;
+}
+.codebox .countdown{
+    display:flex;
+    justify-content: space-between;
+    margin:76rpx 0 34rpx 0;
+}
+.codebox .phonenum{
+    font-size: 32rpx;
+}
+.codebox .count{
+    color: #9D9D9D;
+    font-size: 30rpx;
+}
+.codebox .info{
+    color: #969696;
+    font-size: 22rpx;
+    padding:24rpx 0 0 0;
+    text-align: center;
+}
+.codebox text{
+    color:#E83F57;
+}
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.loading image{
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%);
+    width: 100rpx;
+    height:100rpx;
+    background-size: contain;
+}

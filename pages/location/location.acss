@@ -1,0 +1,77 @@
+.box{
+  width:750rpx;
+}
+.box .top{
+  width: 750rpx;
+  height: 24rpx;
+  background: #F7F7F7;
+}
+.location{
+  width: 680rpx;
+  /* height: 74%; */
+  overflow: hidden;
+  background: #ffffff;
+  padding:0rpx 35rpx;
+}
+.down{
+  background-size: contain;
+  width:25rpx;
+  height: 25rpx;
+}
+.locationbox{
+  display: flex;
+  width: 100%;
+  padding: 18rpx 0 8rpx 0;
+  border-bottom: 1px solid #F1F1F1;
+}
+.locationbox .city{
+  /* width: 100rpx; */
+  height: 58rpx;
+  line-height: 58rpx;
+  border-right: 1px solid #F1F1F1;
+  display: flex;
+  align-items: center;
+  padding-right: 20rpx;
+
+}
+.locationbox .city text{
+  font-size: 28rpx;
+  max-width:140rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-left:20rpx;
+}
+.locationbox .search{
+  height: 58rpx;
+  overflow: hidden;
+}
+.locationbox .search input{
+  font-size: 28rpx;
+  /* width:500rpx; */
+  height: 58rpx;
+  padding: 0rpx 26rpx;
+}
+.inputsearch{
+  width: 450rpx;
+}
+.scrollview{
+  height: 90%;
+}
+.content{
+  display: flex;
+  line-height: 40rpx;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 20rpx 0 ;
+}
+.content image{
+  width:34rpx;
+  height:34rpx;
+  background-size: contain;
+  margin:3rpx 16rpx 0 0;
+}
+.content text{
+  width: 620rpx;
+  color: #000000;
+  font-size: 28rpx;
+}

@@ -1,0 +1,21 @@
+<view class="box">
+    <view class="top"></view>
+    <view class="location">
+        <view class="locationbox">
+            <view class="city" onTap="chooseCity">
+                <text>{{city}}</text>
+                <image class="down" src="../../image/down.png" mode="" />
+            </view>
+            <view class="search" >
+                <input type="" onInput="search" placeholder="请输入地址" auto-focus class="inputsearch" />
+            </view>
+        </view>
+        <scroll-view scroll-y="{{true}}" class="scrollview"  onScrollToUpper="upper" onScrollToLower="lower" onScroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view class="content" a:for="{{tips}}" data-keywords="{{i}}" a:for-item="i"  data-id={{index}} onTap="chooseAddress" a:key="{{i}}" >
+                <image src="../../image/map.png" mode="" />
+                <text>{{i.name}}</text>
+            </view>
+        </scroll-view>
+       
+    </view>
+</view>

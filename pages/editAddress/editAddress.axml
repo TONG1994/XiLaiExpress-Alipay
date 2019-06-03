@@ -1,0 +1,104 @@
+<view>
+  <view class="wrap">
+    <view class="message-input-wrap">
+      <view class="page">
+        <form bindsubmit="onSubmit" bindreset="onReset">
+          <view class="form-row">
+            <view class="form-row-label">地址类型
+            </view>
+            <view class="form-row-content dotradio">
+              <view class="fromaddr" onTap="radiofromclick">
+                <image class="{{addrType==2?'active':''}}" src="../../image/dotactive.png" mode="" />
+                <image class="{{addrType==1?'active':''}}" src="../../image/dot.png" mode="" />
+                <text>收件地址
+                </text>
+              </view>
+              <view class="desaddr" onTap="radiodesclick">
+                <image class="{{addrType==1?'active':''}}" src="../../image/dotactive.png" mode="" />
+                <image class="{{addrType==2?'active':''}}" src="../../image/dot.png" mode="" />
+                <text>发件地址
+                </text>
+              </view>
+            </view>
+          </view>
+          <!-- 地址簿修改 -->
+          <view class="form-line" />
+          <view class="page-section">
+            <view class="form-row">
+              <view class="form-row-label">姓名
+              </view>
+              <view class="form-row-content">
+                <input onInput="nameInput" name="input" class="input" maxlength='10' value='{{address_name}}'/>
+              </view>
+            </view>
+            <view class="form-line" />
+            <view class="form-row">
+              <view class="form-row-label">联系方式
+              </view>
+              <view class="form-row-content">
+                <input onInput="phoneInput" name="input" class="input" type="number" value='{{address_phone}}' />
+              </view>
+            </view>
+            <view class="form-line" />
+            <view class="form-row" onTap="open">
+              <view class="form-row-label">所在区域
+              </view>
+              <view class="form-row-content">
+                <view class="picker">
+                  <view>{{citydistrict==undefined?"请选择所在区域":citydistrict}}
+                  </view>
+                </view>
+                <!-- <image src="../../image/go.png" class='goimg'> -->
+                </image>
+              </view>
+            </view>
+            <view class="form-line" />
+            <view class="form-row">
+              <view class="form-row-label">详细地址
+              </view>
+              <view class="form-row-content">
+                <input class="input" maxlength='50' value='{{srlocation}}' onInput="addressInput" />
+              </view>
+              <!-- <image class="map" src="../../image/map.png" mode="" /> -->
+            </view>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="save-wrap">
+      <button type="default" class="save-btn" onTap="saveaddress"> 保存 
+      </button>
+    </view>
+    <view id="container" style="display: none">
+    </view>
+  </view>
+  <!-- <view class="loading" hidden="{{loadingflag ? false : true}}"><image src="../../image/loading.gif" mode="" /></view> -->
+  <view a:if="{{condition}}" class="selector">
+    <view class="inner_box layui-m-anim-up">
+      <view class="header_box">
+        <view class="item l" data-act="cancel" data-mold="city" onTap="cancel">取消
+        </view>
+        <view class="item c">请选择
+        </view>
+        <view class="item r" data-act="confirm" data-mold="city" onTap="confirm">确定
+        </view>
+      </view>
+      <picker-view class="picker_box" indicatorStyle="height:50rpx;" style="width: 100%; height: 250rpx;" indicator-class="selected" value="{{value}}" onChange="bindChange">
+        <picker-view-column>
+          <view a:for="{{provinces}}" a:key="item" style="height:50rpx;line-height:50rpx;padding-left:10px;">{{item}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view a:for="{{citys}}" a:key="item" style="height:50rpx;line-height: 50rpx;padding-left:10px;">{{item}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view a:for="{{countys}}" a:key="item" style="height:50rpx;line-height: 50rpx;padding-left:10px;">{{item}}
+          </view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+    <view class="layer">
+    </view>
+  </view>
+</view>

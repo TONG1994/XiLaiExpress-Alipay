@@ -1,0 +1,473 @@
+.box {
+    background: #F7F7F7;
+    width:750rpx;
+    overflow: hidden;
+}
+
+.senderbox{
+    display: flex;
+    background: #ffffff;
+    padding: 28rpx 58rpx 28rpx 46rpx;
+    align-items: center;
+    position: relative;
+    margin:0 0 20rpx 0;
+
+}
+.senderbox .senderImage{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 100%;
+    margin:0 36rpx 0 0;
+}
+.senderbox .senderphone{
+    width: 58rpx;
+    height: 58rpx;
+    position: absolute;
+    right: 70rpx;
+}
+.senderbox .senderMessage .mess{
+    display: flex;
+    line-height: 44rpx;
+}
+.senderbox .senderMessage .mess .name{ 
+    font-size: 32rpx;
+    margin:0 15rpx 0 0;
+}
+.senderbox .senderMessage .mess .servicestation{
+    font-size: 24rpx
+}
+.senderbox .senderMessage .senderAddress{
+    font-size: 24rpx;
+    color: #A6A6A6;
+    line-height: 42rpx;
+}
+.expressBox {
+    display: flex;
+    background: #ffffff;
+    margin:0 0 20rpx 0;
+}
+.expressMesslist {
+    padding: 34rpx 40rpx;
+    width: 100%;
+}
+
+.expressMesslist .li {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 1rem;
+}
+
+.expressMesslist .li .hint{
+    position: relative;
+    left: -350rpx;
+    color: #898989;
+}
+
+
+.expressMesslist .li:first-child {
+    padding: 0 0 28rpx 0;
+    border-bottom: 3rpx solid #F1F1F1;
+   
+}
+.expressMesslist .li:last-child {
+    padding: 28rpx 0 0 0;
+}
+
+.liContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 1rem;
+}
+.liContainer .sendtitle {
+    background-size: cover;
+    width: 50rpx;
+    height: 56rpx;
+    margin: 0 32rpx 0 0;
+}
+
+.liContainer .gettitle {
+    color: #0B7BFF;
+    font-size: 32rpx;
+}
+
+.liContainer .dashline {
+    border-left: 1rpx dashed #D9D9D9;
+    margin: 0 14rpx;
+    width: 1rpx;
+    height: 88rpx;
+}
+
+.liContainer .messages {
+    flex: 1;
+    width: 500rpx
+}
+.liContainer .messages .AddressDetail{
+    color: #989898;
+    font-size: 28rpx;
+}
+
+.liContainer .messages .mess {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #121212;
+    font-size: 32rpx;
+    margin: 0 0 6rpx 0;
+}
+.liContainer .messages .mess .name{
+    overflow: hidden;
+    height: 40rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    width: 55%;  
+}
+
+.footdiv {
+    margin:160rpx 0 64rpx 0;
+    height: auto;
+    width: 100%;
+}
+.footdiv.footmargin{
+  margin: 100rpx 0 0 0;
+}
+
+.buttonbox .button {
+    border-radius: 60rpx;
+    margin: auto 86rpx;
+    width: 600rpx;
+    height:88rpx;
+    line-height: 88rpx;
+    background: #9b9b9b;
+    border: none;
+    color: #FFFFFF;
+    font-size: 32rpx;
+}
+.buttonbox .button.red{
+    background-color: #E83F57;
+}
+/* .checkbox checkbox{
+    width: 50rpx;
+    height: 50rpx;
+} */
+.checkbox{
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 50rpx;
+    margin: 30rpx 0;
+
+}
+.check{
+    width: 34rpx;
+    height: 34rpx;
+    margin: 5rpx 10rpx 0 0;
+}
+.a-checkbox .a-icon-success_no_circle{
+    width: 24rpx!important;
+    height: 24rpx!important;
+}
+.checkbox .blue{
+    color: #4A90E2;
+}
+.loading{
+    position: fixed;
+    left:50%;
+    top:40%;
+    transform: translate(-50%);
+}
+.loading image{
+    width: 100rpx;
+    height:100rpx;
+    background-size: contain;
+}
+.righticon{
+    margin:0 20rpx 0 40rpx;
+    width: 14rpx;
+    height: 24rpx;
+}
+.expressDetail{
+    background: #ffffff;
+}
+.expressDetail .section{
+    display: flex;
+    border-bottom: 3rpx solid #F1F1F1;
+    justify-content: space-between;
+    margin: 0 40rpx 0 34rpx;
+    line-height: 84rpx;
+}
+.expressDetail .section:last-child{
+    border-bottom: none;
+}
+.expressDetail .section .section-title{
+    color: #121212;
+    font-size: 28rpx;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.expressDetail .section .section-content{
+    color: #989898;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+}
+.expressDetail .section .section-content .picker{
+    height:1rem;
+    line-height: 1rem;
+    text-align: right;
+    min-width: 2rem 
+}
+
+
+/* 时间选择 */
+/**index.wxss**/
+.container{
+width: 400rpx;
+font-size: 28rpx;
+}
+
+.citybody {
+    width: 750rpx;
+}
+.citypicker{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    z-index: 999;
+    width: 750rpx;
+    background: #f5f2f9;
+}
+.picker{
+    font-size: 28rpx;
+    height: 88rpx;
+}
+.picker view{
+    height: 88rpx;
+    /* line-height: 88rpx; */
+}
+.cityheader {
+  width: 100%;
+  z-index: 5;
+  height: 1rem;
+  background: #ffffff;
+  border-bottom: 3rpx solid #dddddd;
+}
+.timebody{
+    width:690rpx;
+    padding:0 30rpx;
+    height:500rpx;
+    background: #ffffff;
+}
+.city-cancel {
+  float: left;
+  margin: 20rpx 40rpx;
+  color: #0575f2;
+  font-size: 34rpx;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx 40rpx;
+  color: #0575f2;
+  font-size: 34rpx;
+}
+
+/* tab切换 */
+ .datetabs{
+    background: #ffffff;
+    width:750rpx;
+    color: #121212;
+    font-size: 32rpx;
+    display: flex;
+ }
+.datetabs .tab{
+    width:210rpx;
+    line-height:70rpx;
+     margin:15rpx 12rpx 0;
+    text-align: center;
+    border-radius: 5rpx;
+    border:3rpx solid #ffffff;
+}
+.datetabs .tab .day{
+    font-size:38rpx;
+}
+.datetabs .tab{
+    font-size:28rpx;
+    border:3rpx solid #dddddd;
+}
+.datetabs .tab.active{
+  border:3rpx solid #0575f2;
+}
+
+.goodsbody{
+    width:690rpx;
+    padding:0 30rpx;
+    height:400rpx;
+    background: #ffffff;
+}
+.goodstabs{
+    background: #ffffff;
+    width:750rpx;
+    color: #121212;
+    font-size: 32rpx;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top:30rpx;
+}
+
+.goodstabs .tabGoods{
+    width:210rpx;
+    line-height:70rpx;
+     margin:20rpx 9rpx 0 8rpx;
+    text-align: center;
+    border-radius: 5rpx;
+    border:3rpx solid #ffffff;
+}
+.goodstabs .tabGoods .goods{
+    font-size:38rpx;
+}
+.goodstabs .tabGoods{
+    font-size:28rpx;
+    border:3rpx solid #dddddd;
+}
+.goodstabs .active{
+  border:3rpx solid #0575f2;
+  color:#0575f2
+}
+.input{
+  border-bottom:1rpx solid #dddddd;
+  margin-top:40rpx;
+  width:660rpx;
+}
+.inputshow{
+  display:none;
+}
+
+.timetabs{
+    background: #ffffff;
+    width:750rpx;
+    line-height: 104rpx;
+    color: #121212;
+    font-size: 32rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.timetabs .tab{
+    margin:15rpx 12rpx 0;
+    width:210rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    text-align: center;
+    border-radius: 5rpx;
+}
+.timetabs .tab.active{
+  border:3rpx solid #0575f2;
+}
+
+.shadow{
+    position: fixed;
+    width: 750rpx;
+    height: 100%;
+    background: gray;
+    opacity: 0.6;
+    top: 0;
+}
+
+.tip{
+    color:#FF8F00;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size:26rpx;
+    margin-top:20rpx;
+    margin-left:84rpx
+}
+.orgName{
+    margin-top: 20rpx;
+    display: none;
+}
+
+.orgName--show{
+    display: block;
+}
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: #F7F7F7;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 12;
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding:20rpx 5%;
+    width:90%;
+    background: #ffffff;
+    margin-bottom: 20rpx;
+}
+.list-left{
+    display: flex;
+    align-items: center;
+}
+.list-left .list-icon {
+    background-size: cover;
+    width: 36rpx;
+    height: 30rpx;
+    margin: 0 32rpx 0 0;
+}
+.list-left .list-text{
+    text-align: left;
+}
+.orgtext{
+    overflow: hidden;
+    line-height: 40rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    width: 100%; 
+    color:#121212;
+    font-size:30rpx;
+}
+.orgtextAddress{
+    overflow: hidden;
+    line-height: 40rpx;
+    white-space: wrap; 
+    width: 100%; 
+    color:#A6A6A6;
+    font-size:26rpx;
+}
+.orgPhone{
+    color:#A6A6A6;
+}
+.orgArow--Show{
+    display: none;
+}
+.arrowbox{
+    width:74rpx;
+}

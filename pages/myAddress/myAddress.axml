@@ -1,0 +1,60 @@
+<view class="wrapbox">
+    <view class="wrap box">
+        <view class="search-wrap">
+            <view class="search-ipt">
+                <view class="ipt-icon" onTap="searchAddress">
+                    <image src="../../image/search.png" mode="scaleToFill" />
+                </view>
+                <view class="ipt-wrap">
+                    <input type="text" auto-focus="true" placeholder="请输入姓名、电话、地址…" onInput="searchInput" onConfirm="searchAddress">
+                    </view>
+                </view>
+                <view class="address-manage {{active}}" id="addressManage" onTap="manage">管理</view>
+                <!-- <view class="address-manage1" onTap="zhibutton"></view> -->
+            </view>
+            <view class="tabs">
+                <view class="tab" onTap="tab" a:for="{{tabs}}" data-id="{{index}}">{{item.name}}</view>
+            </view>
+            <view class="tabsline" style="transition:0.4s all ease;left:{{left}}rpx;"></view>
+            <view class="zhifubao-btn" onTap="zhibutton">
+                <image src="../../image/zhifubao.png" mode="widthFix" />
+            </view>
+            <scroll-view class="scroll" scroll-y="{{true}}" style='height:{{scrollheight}}px' onScrollToUpper="upper" onScrollToLower="lower" onScroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                <view class="tabscontents">
+                    <view class="tabcontent {{currentTab==index?'show':'hidden'}}" a:for="{{tabs}}">
+                        <view class="sent-address li {{zhifubao?'zhifubao-address':''}}" a:for="{{list}}">
+                            <view class="content-wrap border-1px-bottom" onTap="setaddress" data-id="{{index}}">
+                                <view class="adr-wrap">
+                                    <view class="adr-name">{{item.name}}</view>
+                                    <view class="adr-phone">{{item.phone}}</view>
+                                </view>
+                                <view class="adr-detail">{{item.done_proviceCityRegionTxt}}{{item.addrDetail}} </view>
+                            </view>
+                            <view class="adr-edit" a:if={{show}}>
+                                <view class="edit-btn" onTap="editAddress" data-id="{{index}}">
+                                    <image class="image" src="../../image/edit.png" mode="" />
+                                    <text>编辑</text>
+                                </view>
+                                <view class="detail-btn" onTap="deleteAddress" data-id="{{index}},{{item.uuid}}">
+                                    <image class="image" src="../../image/delete.png" mode="" />
+                                    <text>删除</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+            <view class="loading" hidden="{{loadingflag ? false : true}}">
+                <image src="../../image/loading.gif" mode="" />
+            </view>
+            <!--新增地址-->
+            <view class="new-add-address {{showBtn?'showBtn':''}}" onTap="addAddress">
+                <button>新增地址</button>
+            </view>
+        </view>
+        <view class="noaddress" hidden="{{noaddress ? false : true}}">
+            <image src="../../image/noaddress.png" mode="" />
+            <view class="addresstxt">您还没有添加过哦～</view>
+            <!-- <view class="addaddress" onTap="addAddress">新增地址</view> -->
+        </view>
+    </view>

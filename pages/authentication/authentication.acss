@@ -1,0 +1,25 @@
+.box {
+    width:750rpx;
+    background: #F7F7F7;
+}
+.box .infor{
+    width: 650rpx;
+    height: 260rpx;
+    background: #FFFFFF;
+    margin: 30rpx 50rpx 40rpx 50rpx;
+    border-radius: 30rpx;
+    text-align: center;
+    padding-top:40rpx;
+    font-size:34rpx;
+    box-shadow: 0rpx 0rpx 4rpx 6rpx  rgba(232, 63, 87, 0.4);
+}
+.box .inforText{
+    width: 650rpx;
+    margin: 30rpx 50rpx 0 50rpx;
+    line-height: 40rpx;
+}
+.infor image{
+    width:105rpx;
+    height:100rpx;
+    margin:20rpx 272.5rpx;
+}
